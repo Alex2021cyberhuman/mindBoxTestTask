@@ -6,6 +6,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeAreaCalculator.UnitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeAreaCalculator.Benchmark", "ShapeAreaCalculator.Benchmark\ShapeAreaCalculator.Benchmark.csproj", "{4693A532-3713-4108-B4C9-5AB8069672EA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{E568C362-7DFE-4929-82BC-3A1FAD036232}"
+	ProjectSection(SolutionItems) = preProject
+		Sql\answer.sql = Sql\answer.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
