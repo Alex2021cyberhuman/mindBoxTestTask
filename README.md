@@ -33,7 +33,11 @@ C# developer junior / middle (.net, full-stack / back-end)
 Проверку на то, является ли треугольник прямоугольным
 Структура Tirangle реализует проверку CheckIsRight
 
-Решение в проектах ShapeAreaCalculator
+# Решение в проектах ShapeAreaCalculator
+ShapeAreaCalculator.Core - библиотека для внешних клиентов
+ShapeAreaCalculator.UnitTests - Юнит-тесты
+ShapeAreaCalculator.Benchmarks - бенчмарки реализаций вычисления
+
 
 # Задание 2:
 
@@ -43,6 +47,7 @@ C# developer junior / middle (.net, full-stack / back-end)
 
 Github или Pastebin всё еще удобнее чем поле на hh. По возможности — положите ответ рядом с кодом из первого вопроса.
 
-Решение в файле Sql/answer.sql
+# Решение в файле Sql/answer.sql
+
 Если надо выводить именно «Имя продукта – Имя категории», то можно реализовать проверку в select - если у категории не указан заголовок 
 (это будет работать для продуктов без категорий при left join), выводить имя продукта, иначе объединять строки: имя продукта, тире, имя категории.
