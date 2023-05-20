@@ -2,7 +2,7 @@
 using ShapeAreaCalculator.Core.Exceptions;
 using ShapeAreaCalculator.Core.Shapes;
 
-namespace ShapeAreaCalculator.UnitTests;
+namespace ShapeAreaCalculator.UnitTests.ShapeTests;
 
 public class CircleTests
 {

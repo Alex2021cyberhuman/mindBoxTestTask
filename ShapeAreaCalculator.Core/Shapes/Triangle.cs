@@ -1,4 +1,5 @@
-﻿using ShapeAreaCalculator.Core.Exceptions;
+﻿using ShapeAreaCalculator.Core.Calculators;
+using ShapeAreaCalculator.Core.Exceptions;
 using ShapeAreaCalculator.Core.Interfaces;
 
 namespace ShapeAreaCalculator.Core.Shapes;

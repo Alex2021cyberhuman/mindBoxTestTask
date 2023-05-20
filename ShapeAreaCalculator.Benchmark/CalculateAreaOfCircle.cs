@@ -1,5 +1,6 @@
 ﻿using BenchmarkDotNet.Attributes;
 using ShapeAreaCalculator.Core;
+using ShapeAreaCalculator.Core.Calculators;
 using ShapeAreaCalculator.Core.Interfaces;
 using ShapeAreaCalculator.Core.Shapes;
 

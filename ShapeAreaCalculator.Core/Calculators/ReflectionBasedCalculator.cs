@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace ShapeAreaCalculator.Core;
+namespace ShapeAreaCalculator.Core.Calculators;
 
 /// <summary>
 ///     Reflection based realization

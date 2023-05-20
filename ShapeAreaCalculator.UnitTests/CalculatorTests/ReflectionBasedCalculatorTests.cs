@@ -1,7 +1,8 @@
 ﻿using FluentAssertions;
-using ShapeAreaCalculator.Core;
+using ShapeAreaCalculator.Core.Calculators;
+using ShapeAreaCalculator.UnitTests.AbstractTests;
 
-namespace ShapeAreaCalculator.UnitTests;
+namespace ShapeAreaCalculator.UnitTests.CalculatorTests;
 
 public class ReflectionBasedCalculatorTests : AbstractCalculatorTests
 {

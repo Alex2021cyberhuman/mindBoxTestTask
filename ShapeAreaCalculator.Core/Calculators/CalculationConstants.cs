@@ -1,4 +1,4 @@
-﻿namespace ShapeAreaCalculator.Core;
+﻿namespace ShapeAreaCalculator.Core.Calculators;
 
 public static class CalculationConstants
 {

@@ -1,6 +1,6 @@
 ﻿using ShapeAreaCalculator.Core.Interfaces;
 
-namespace ShapeAreaCalculator.Core;
+namespace ShapeAreaCalculator.Core.Calculators;
 
 /// <summary>
 ///     Simple realization that working with object of <see cref="IShapeWithArea"/>
