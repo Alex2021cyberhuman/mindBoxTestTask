@@ -34,9 +34,9 @@ C# developer junior / middle (.net, full-stack / back-end)
 Структура Tirangle реализует проверку CheckIsRight
 
 # Решение в проектах ShapeAreaCalculator
-ShapeAreaCalculator.Core - библиотека для внешних клиентов
-ShapeAreaCalculator.UnitTests - Юнит-тесты
-ShapeAreaCalculator.Benchmarks - бенчмарки реализаций вычисления
+* ShapeAreaCalculator.Core - библиотека для внешних клиентов
+* ShapeAreaCalculator.UnitTests - Юнит-тесты
+* ShapeAreaCalculator.Benchmarks - бенчмарки реализаций вычисления
 
 
 # Задание 2:
