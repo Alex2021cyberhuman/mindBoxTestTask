@@ -9,6 +9,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{E568C362-7DFE-4929-82BC-3A1FAD036232}"
 	ProjectSection(SolutionItems) = preProject
 		Sql\answer.sql = Sql\answer.sql
+		Sql\init.sql = Sql\init.sql
 	EndProjectSection
 EndProject
 Global
