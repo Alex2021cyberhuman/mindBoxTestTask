@@ -28,10 +28,13 @@ public class ReflectionBasedConstructor : IShapeConstructor
         var constructor = Constructors.GetOrAdd(type,
             typeArgument =>
             {
-                var acceptedType = _scanningAssemblies.SelectMany(x => x.GetTypes())
-                    .FirstOrDefault(t => t.Name == type);
+                var acceptedType = _scanningAssemblies.SelectMany(x => x.GetTypes()).FirstOrDefault(t =>
+                    (t.IsClass || t.IsValueType) &&
+                    !t.IsAbstract &&
+                    t.Name == typeArgument &&
+                    t.IsAssignableTo(typeof(IShapeWithArea)));
                 if (acceptedType is null)
-                    throw new ShapeConstructorException(nameof(type), type);
+                    throw new ShapeConstructorException(nameof(type), typeArgument);
                 var constructors = acceptedType.GetConstructors().ToList();
                 var acceptedConstructor = constructors.FirstOrDefault(c =>
                     c.GetParameters().Length <= parameters.Length &&
