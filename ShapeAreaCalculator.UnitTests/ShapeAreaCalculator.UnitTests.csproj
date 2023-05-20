@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ShapeAreaCalculator.Core\ShapeAreaCalculator.Core.csproj" />
+        <ProjectReference Include="..\ShapeAreaCalculator.Core\ShapeAreaCalculator.Core.csproj" />
     </ItemGroup>
 
 </Project>

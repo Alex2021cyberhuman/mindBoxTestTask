@@ -4,7 +4,7 @@ using ShapeAreaCalculator.UnitTests.AbstractTests;
 
 namespace ShapeAreaCalculator.UnitTests.ConstructorTests;
 
-public class ShapeSwitchBasedConstructorTestsTests : AbstractShapeConstructorTests
+public class ReflectionBasedConstructorTestsTests : AbstractShapeConstructorTests
 {
-    protected override IShapeConstructor ShapeConstructor => new ShapeSwitchBasedConstructor();
+    protected override IShapeConstructor ShapeConstructor => ReflectionBasedConstructor.Default;
 }
