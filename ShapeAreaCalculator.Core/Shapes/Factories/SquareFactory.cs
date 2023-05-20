@@ -6,5 +6,8 @@ public class SquareFactory : IShapeFactory
 {
     public string Type => nameof(Square);
 
-    public IShapeWithArea Parse(params double[] parameters) => new Square(parameters[0]);
+    public IShapeWithArea Parse(params double[] parameters)
+    {
+        return new Square(parameters[0]);
+    }
 }

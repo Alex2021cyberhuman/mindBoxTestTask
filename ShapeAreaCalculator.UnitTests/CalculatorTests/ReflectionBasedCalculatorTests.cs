@@ -52,7 +52,10 @@ public class ReflectionBasedCalculatorTests : AbstractCalculatorTests
 
     public class RandomTypeWithRequiredMethod
     {
-        public double CalculateArea() => ExpectedArea;
+        public double CalculateArea()
+        {
+            return ExpectedArea;
+        }
     }
 
     public class RandomTypeWithoutRequiredMethod
@@ -61,11 +64,17 @@ public class ReflectionBasedCalculatorTests : AbstractCalculatorTests
 
     public class RandomTypeWithRequiredMethodWithIncorrectReturnType
     {
-        public float CalculateArea() => default;
+        public float CalculateArea()
+        {
+            return default;
+        }
     }
 
     public class RandomTypeWithRequiredMethodWithParameter
     {
-        public double CalculateArea(object obj) => default;
+        public double CalculateArea(object obj)
+        {
+            return default;
+        }
     }
 }

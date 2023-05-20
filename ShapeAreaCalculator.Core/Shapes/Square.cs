@@ -15,8 +15,7 @@ public readonly struct Square : IShapeWithArea
     /// <param name="side">Length of single side of the square in conventional units</param>
     /// <exception cref="NegativeParameterException">If side is less than zero</exception>
     /// <exception cref="ZeroParameterException">If side is equals zero</exception>
-    public Square(
-        double side)
+    public Square(double side)
     {
         GuardHelpers.ThrowIfNegativeOrEqualsZero(side, nameof(side));
 

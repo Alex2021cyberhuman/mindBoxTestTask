@@ -14,23 +14,21 @@ public class SquareTests
     [InlineData(5d)]
     [InlineData(6d)]
     [InlineData(1000000d)]
-    public void SuccessfulCreation_CorrectParameters(
-        double side)
+    public void SuccessfulCreation_CorrectParameters(double side)
     {
         var method = () => new Square(side);
         method.Should().NotThrow();
     }
-    
+
     [Theory]
     [InlineData(-1d)]
     [InlineData(-2d)]
-    public void FailCreationWithNegativeParameterException_NegativeSide(
-        double side)
+    public void FailCreationWithNegativeParameterException_NegativeSide(double side)
     {
         var method = () => new Square(side);
         method.Should().Throw<NegativeParameterException>();
-    }  
-    
+    }
+
     [Fact]
     public void FailCreationWithZeroParameterException_ZeroSide()
     {

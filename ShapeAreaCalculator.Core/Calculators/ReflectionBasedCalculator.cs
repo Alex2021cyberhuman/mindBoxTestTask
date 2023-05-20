@@ -8,23 +8,24 @@ namespace ShapeAreaCalculator.Core.Calculators;
 ///     Reflection based realization
 /// </summary>
 /// <remarks>
-///     Prefer <see cref="InterfaceBasedCalculator"/> instead this realization.
+///     Prefer <see cref="InterfaceBasedCalculator" /> instead this realization.
 ///     It causes boxing on value types.
 /// </remarks>
 /// <example>
-/// 1) Create type that contains public instance 'CalculateArea' method that returns <see cref="double"/> and hasn't any parameter
-/// <code>
+///     1) Create type that contains public instance 'CalculateArea' method that returns <see cref="double" /> and hasn't
+///     any parameter
+///     <code>
 /// public class MyShape
 /// { 
 ///   public double CalculateArea() => ...;
 /// }
 /// </code>
-/// 2) Create instance <see cref="ReflectionBasedCalculator"/> and keep it one per application
-/// <code>
+///     2) Create instance <see cref="ReflectionBasedCalculator" /> and keep it one per application
+///     <code>
 /// var reflectionBasedCalculator = new ReflectionBasedCalculator();
-/// </code> 
-/// 3) Call calculate and pass object that have CalculateArea method
-/// <code>
+/// </code>
+///     3) Call calculate and pass object that have CalculateArea method
+///     <code>
 /// var shape = new MyShape();
 /// var result = reflectionBasedCalculator.Calculate(shape);
 /// </code>
@@ -43,10 +44,8 @@ public class ReflectionBasedCalculator
                     BindingFlags.Public | BindingFlags.Instance,
                     Type.EmptyTypes);
                 if (calculateAreaMethod is null || calculateAreaMethod.ReturnType != typeof(double))
-                {
                     throw new InvalidOperationException(
                         $"Object of type ${type} should has method 'CalculateArea' without arguments and return type 'double'");
-                }
 
                 var instanceParameter = Expression.Parameter(typeof(object), "obj");
 

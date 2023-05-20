@@ -1,7 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
-using ShapeAreaCalculator.Core;
 using ShapeAreaCalculator.Core.Calculators;
-using ShapeAreaCalculator.Core.Interfaces;
 using ShapeAreaCalculator.Core.Shapes;
 
 namespace ShapeAreaCalculator.Benchmark;
@@ -10,11 +8,10 @@ namespace ShapeAreaCalculator.Benchmark;
 [MemoryDiagnoser]
 public class CalculateAreaOfCircle
 {
-    private List<Circle>? _list;
+    private const int N = 1_000_000;
     private InterfaceBasedCalculator? _interfaceBased;
+    private List<Circle>? _list;
     private ReflectionBasedCalculator? _reflectionBased;
-
-    public const int N = 1_000_000;
 
     [IterationSetup]
     public void Setup()

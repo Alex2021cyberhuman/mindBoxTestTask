@@ -5,7 +5,7 @@ using ShapeAreaCalculator.Core.Shapes;
 
 namespace ShapeAreaCalculator.UnitTests.AbstractTests;
 
-public abstract class AbstractShapeConstructor
+public abstract class AbstractShapeConstructorTests
 {
     protected abstract IShapeConstructor ShapeConstructor { get; }
 
@@ -46,11 +46,11 @@ public abstract class AbstractShapeConstructor
     public static IEnumerable<object[]> CorrectParametersForCreation()
     {
         yield return new object[] { new Circle(1), nameof(Circle), new double[] { 1 } };
-        yield return new object[] { new Circle(2.5), nameof(Circle), new double[] { 2.5 } };
+        yield return new object[] { new Circle(2.5), nameof(Circle), new[] { 2.5 } };
         yield return new object[] { new Circle(10000), nameof(Circle), new double[] { 10000 } };
         yield return new object[] { new Square(123), nameof(Square), new double[] { 123 } };
         yield return new object[] { new Square(99999), nameof(Square), new double[] { 99999 } };
-        yield return new object[] { new Square(0.000001), nameof(Square), new double[] { 0.000001 } };
+        yield return new object[] { new Square(0.000001), nameof(Square), new[] { 0.000001 } };
         yield return new object[] { new Triangle(2, 2, 3), nameof(Triangle), new double[] { 2, 2, 3 } };
         yield return new object[] { new Triangle(100, 100, 199), nameof(Triangle), new double[] { 100, 100, 199 } };
         yield return new object[] { new Triangle(24, 48, 64), nameof(Triangle), new double[] { 24, 48, 64 } };

@@ -58,7 +58,7 @@ public class TriangleTests
         var method = () => new Triangle(sideA, sideB, sideC);
         method.Should().Throw<ZeroParameterException>();
     }
-    
+
     [Theory]
     [InlineData(3, 1, 1)]
     [InlineData(2, 1, 1)]

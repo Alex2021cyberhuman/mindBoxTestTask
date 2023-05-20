@@ -15,8 +15,7 @@ public readonly struct Circle : IShapeWithArea
     /// <param name="radius">Radius of the circle in conventional units</param>
     /// <exception cref="NegativeParameterException">If radius is less than zero</exception>
     /// <exception cref="ZeroParameterException">If radius is equals zero</exception>
-    public Circle(
-        double radius)
+    public Circle(double radius)
     {
         GuardHelpers.ThrowIfNegativeOrEqualsZero(radius, nameof(radius));
 

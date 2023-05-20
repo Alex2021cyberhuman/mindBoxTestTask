@@ -14,23 +14,21 @@ public class CircleTests
     [InlineData(5d)]
     [InlineData(6d)]
     [InlineData(1000000d)]
-    public void SuccessfulCreation_CorrectParameters(
-        double radius)
+    public void SuccessfulCreation_CorrectParameters(double radius)
     {
         var method = () => new Circle(radius);
         method.Should().NotThrow();
     }
-    
+
     [Theory]
     [InlineData(-1d)]
     [InlineData(-2d)]
-    public void FailCreationWithNegativeParameterException_NegativeRadius(
-        double radius)
+    public void FailCreationWithNegativeParameterException_NegativeRadius(double radius)
     {
         var method = () => new Circle(radius);
         method.Should().Throw<NegativeParameterException>();
-    }  
-    
+    }
+
     [Fact]
     public void FailCreationWithZeroParameterException_ZeroRadius()
     {

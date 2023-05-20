@@ -18,10 +18,7 @@ public readonly struct Triangle : IShapeWithArea, IRightTriangleCheck
     /// <param name="sideC">Length of third side in conventional units</param>
     /// <exception cref="NegativeParameterException">If any side is less than zero</exception>
     /// <exception cref="ZeroParameterException">If any side is equals zero</exception>
-    public Triangle(
-        double sideA,
-        double sideB,
-        double sideC)
+    public Triangle(double sideA, double sideB, double sideC)
     {
         GuardHelpers.ThrowIfNegativeOrEqualsZero(sideA, nameof(sideA));
         GuardHelpers.ThrowIfNegativeOrEqualsZero(sideB, nameof(sideB));
@@ -42,7 +39,7 @@ public readonly struct Triangle : IShapeWithArea, IRightTriangleCheck
     public double SideC { get; }
 
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     /// <returns>
     ///     Function is based on the Pythagorean Theorem
     /// </returns>
@@ -55,7 +52,7 @@ public readonly struct Triangle : IShapeWithArea, IRightTriangleCheck
         return result;
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     /// <remarks>
     ///     Calculates triangle area only by 3 sides.
     ///     Function is based on the Heron`s formula.

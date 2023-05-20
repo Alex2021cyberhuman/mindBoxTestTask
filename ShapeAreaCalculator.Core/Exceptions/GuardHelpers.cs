@@ -2,9 +2,7 @@
 
 public static class GuardHelpers
 {
-    public static void ThrowIfNegativeOrEqualsZero(
-        double value,
-        string parameter)
+    public static void ThrowIfNegativeOrEqualsZero(double value, string parameter)
     {
         if (value < 0d)
             throw new NegativeParameterException(parameter);

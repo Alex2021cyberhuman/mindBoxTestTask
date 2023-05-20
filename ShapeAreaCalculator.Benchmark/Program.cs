@@ -1,3 +1,4 @@
 ﻿using System.Reflection;
+using BenchmarkDotNet.Running;
 
-BenchmarkDotNet.Running.BenchmarkRunner.Run(Assembly.GetCallingAssembly(), args: args);
+BenchmarkRunner.Run(Assembly.GetCallingAssembly(), args: args);

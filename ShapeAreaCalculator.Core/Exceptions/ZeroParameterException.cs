@@ -2,9 +2,7 @@
 
 public class ZeroParameterException : ArgumentException
 {
-    public ZeroParameterException(
-        string? paramName) : base("This parameter cannot be equal zero",
-        paramName)
+    public ZeroParameterException(string? paramName) : base("This parameter cannot be equal zero", paramName)
     {
     }
 }

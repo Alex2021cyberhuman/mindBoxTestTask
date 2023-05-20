@@ -6,8 +6,7 @@ namespace ShapeAreaCalculator.UnitTests.CalculatorTests;
 
 public class InterfaceBasedCalculatorTests : AbstractCalculatorTests
 {
-    protected override double Call(
-        object shapeWithArea)
+    protected override double Call(object shapeWithArea)
     {
         var calculator = new InterfaceBasedCalculator();
         return calculator.Calculate((IShapeWithArea)shapeWithArea);

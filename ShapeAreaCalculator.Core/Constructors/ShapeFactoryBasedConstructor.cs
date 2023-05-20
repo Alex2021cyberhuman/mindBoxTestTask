@@ -13,16 +13,13 @@ public class ShapeFactoryBasedConstructor : IShapeConstructor
         _shapeFactories = shapeFactories.ToDictionary(factory => factory.Type);
     }
 
+    public static ShapeFactoryBasedConstructor Default =>
+        new(new IShapeFactory[] { new CircleFactory(), new SquareFactory(), new TriangleFactory() });
+
     public IShapeWithArea Construct(string type, params double[] parameters)
     {
-        if (_shapeFactories.TryGetValue(type, out var factory))
-        {
-            return factory.Parse(parameters);
-        }
+        if (_shapeFactories.TryGetValue(type, out var factory)) return factory.Parse(parameters);
 
         throw new ShapeConstructorException(nameof(type), type);
     }
-
-    public static ShapeFactoryBasedConstructor Default=>
-        new(new IShapeFactory[] { new CircleFactory(), new SquareFactory(), new TriangleFactory() });
 }
